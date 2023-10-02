@@ -12,8 +12,9 @@ export class CharacterService {
     private readonly configService: ConfigService,
   ) {}
 
-  findAll(): Observable<AxiosResponse<any>> {
-    const apiUrl = this.configService.get<string>('API_URL' + '/character/1');
+  findById(_param: string): Observable<AxiosResponse<any>> {
+    const apiUrl =
+      this.configService.get<string>('API_URL') + '/character/' + _param;
     return this.httpService.get(apiUrl).pipe(map((response) => response.data));
   }
 }

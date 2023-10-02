@@ -4,6 +4,6 @@ import { HttpModule } from '@nestjs/axios';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ConfigModule.forRoot(), CharacterModule, HttpModule],
+  imports: [ConfigModule.forRoot(), CharacterModule, HttpModule]
 })
 export class AppModule {}
